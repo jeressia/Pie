@@ -62,11 +62,11 @@ const printToDom = (divId, textToPrint) => {
 
 const buildPies= () => {
     let domString='';
-    pies.forEach ((pies) => {
+    pies.forEach ((pie) => {
         domString += `<div class="pie">`
-        domString +=    `<h3>${pies.name}</h3>`
-        domString +=    `<h3><img src="${pies.imageUrl}"></h3>`
-        domString +=    `<p> ${pies.instructor} loves ${pies.name} with ${pies.iceCream}! Yum!</p>`
+        domString +=    `<h3>${pie.name}</h3>`
+        domString +=    `<h3><img src="${pie.imageUrl}"></h3>`
+        domString +=    `<p> ${pie.instructor} loves ${pie.name} with ${pie.iceCream}! Yum!</p>`
         domString += `</div>`
     
     });
