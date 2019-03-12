@@ -36,24 +36,24 @@ const pies = [
       iceCream: 'Coffee',
     },
     {
-      name: 'Pecan Pie',
-      ingredients: 'Pecans, sugar, butter, flour',
-      bakeTemp: 5000,
-      drinkPairing: 'Milk',
-      imageURL: 'https://cookiesandcups.com/wp-content/uploads/2018/10/pecanpie-3.jpg',
-      instructor: 'Saul',
-      iceCream: 'Vanilla',
-    },
-    {
-      name:'Keylime Pie',
-      ingredients: 'lemons, sugar, butter, flour',
-      bakeTemp: 5000,
-      drinkPairing: 'Water',
-      imageURL: 'https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0020/img38l.jpg',
-      instructor: 'Saul',
-      iceCream: 'none',
-    },
-  ];
+        name: 'Pecan Pie',
+        ingredients: 'Pecans, sugar, butter, flour',
+        bakeTemp: 5000,
+        drinkPairing: 'Milk',
+        imageUrl: 'https://cookiesandcups.com/wp-content/uploads/2018/10/pecanpie-3.jpg',
+        instructor: 'Saul',
+        iceCream: 'Vanilla',
+      },
+      {
+        name:'Keylime Pie',
+        ingredients: 'lemons, sugar, butter, flour',
+        bakeTemp: 5000,
+        drinkPairing: 'Water',
+        imageUrl: 'https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0020/img38l.jpg',
+        instructor: 'Saul',
+        iceCream: 'none',
+      },
+    ];
 
 const printToDom = (divId, textToPrint) => {
     const selectedDiv=document.getElementById(divId);
@@ -62,15 +62,30 @@ const printToDom = (divId, textToPrint) => {
 
 const buildPies= () => {
     let domString='';
-    for(let i=0; i < pies.length; i++){
+    pies.forEach ((pies) => {
         domString += `<div class="pie">`
-        domString +=    `<h3>${pies[i].name}</h3>`
+        domString +=    `<h3>${pies.name}</h3>`
+        domString +=    `<h3><img src="${pies.imageUrl}"></h3>`
+        domString +=    `<p> ${pies.instructor} loves ${pies.name} with ${pies.iceCream}! Yum!</p>`
         domString += `</div>`
-    }
+    
+    });
+    
     printToDom('pie',domString);
+    };
+
+const buttonClick = () => {
+    console.log('you clicked a button')
+};
+
+const buttonEvents = () => {
+   document.getElementById('Zoe').addEventListener('click',buttonClick);
 };
 
 const init = () => {
+    buttonEvents();
     buildPies();
-}
+};
 init ();
+
+
