@@ -1,3 +1,23 @@
 body {
     background: orange;
 }
+
+.container {
+    display: flex;
+    
+}
+
+.pie {
+    flex-direction: row-reverse;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.pie img {
+    width: 100px;
+}
+
