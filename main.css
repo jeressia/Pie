@@ -1,23 +1,35 @@
 body {
-    background: orange;
-}
-
-.container {
+    background-color: pink;
+  }
+  
+  
+  #pies {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    
-}
-
-.pie {
-    flex-direction: row-reverse;
-    border: 1px solid black;
-    margin: 5px;
-    background-color: white;
-    padding: 5px;
+  
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px double #808080;
+    color: white;
     text-align: center;
-
-}
-
-.pie img {
-    width: 100px;
-}
-
+    background: white;
+    color: #505050;
+  }
+  
+  .card img {
+    height: 200px;
+    width: 200px;
+  }
